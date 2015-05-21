@@ -16,11 +16,15 @@ public class DefaultKeyResolution implements KeyResolution {
             // domain
             return task.getHost()+"."+task.getServer()+"."+task.getAttribute();
         }
-        else
+        else if (task.getAlias() != null && !task.getAlias().trim().equalsIgnoreCase(""))
         {
-            // standalone
-            return task.getServer()+"."+task.getAttribute();
+            // standalone ( if alias != null put only alias value in the name that be saved on db)
+            return task.getServer() + "."+task.getAlias();
+        } else {
+        	// standalone
+        	return task.getServer() + "."+task.getAttribute();
         }
+        
 
     }
 }

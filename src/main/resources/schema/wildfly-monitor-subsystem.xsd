@@ -58,6 +58,7 @@
         <xs:attribute name="seconds" type="xs:int" use="optional"/>
         <xs:attribute name="minutes" type="xs:int" use="optional"/>
         <xs:attribute name="hours" type="xs:int" use="optional"/>
+        <xs:attribute name="alias" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:simpleType name="adapterType">

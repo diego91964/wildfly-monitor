@@ -120,12 +120,27 @@ public class RhqMetricsService implements Service<RhqMetricsService> {
                     }
 
 
-                    ResourceRef ref = new ResourceRef(
-                            metricCfg.get("resource").asString(),
-                            metricCfg.get("attribute").asString(),
-                            interval
-                    );
+                    ResourceRef ref;
+                    
+                    if (metricCfg.hasDefined("alias")){
+                    	
+                    	  ref = new ResourceRef(
+                                 metricCfg.get("resource").asString(),
+                                 metricCfg.get("attribute").asString(),
+                                 interval,
+                                 metricCfg.get("alias").asString()
+                                 
+                         );
 
+                    }else {
+                    	
+                    	ref = new ResourceRef(
+                                metricCfg.get("resource").asString(),
+                                metricCfg.get("attribute").asString(),
+                                interval);
+                                
+                    }
+                   
                     schedulerConfig.addResourceRef(ref);
 
                 }

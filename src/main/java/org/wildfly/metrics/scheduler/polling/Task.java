@@ -17,13 +17,15 @@ public class Task {
     private final String attribute;
     private final String subref;
     private final Interval interval;
+    private final String alias;
 
     public Task(
             String host, String server,
             Address address,
             String attribute,
             String subref,
-            Interval interval
+            Interval interval,
+            String alias
     ) {
         this.host = host;
         this.server = server;
@@ -31,9 +33,15 @@ public class Task {
         this.attribute = attribute;
         this.subref = subref;
         this.interval = interval;
+        this.alias = alias;
     }
 
-    public Address getAddress() {
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public Address getAddress() {
         return address;
     }
 

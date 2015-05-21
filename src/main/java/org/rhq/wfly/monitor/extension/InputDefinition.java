@@ -35,13 +35,17 @@ public class InputDefinition extends PersistentResourceDefinition {
 
     static final SimpleAttributeDefinition HOURS  = new SimpleAttributeDefinitionBuilder("hours", ModelType.INT,true)
                .build();
+    
+    static final SimpleAttributeDefinition ALIAS  = new SimpleAttributeDefinitionBuilder("alias", ModelType.STRING,true)
+    .build();
 
     static AttributeDefinition[] ATTRIBUTES = {
             RESOURCE,
             ATTRIBUTE,
             SECONDS,
             MINUTES,
-            HOURS
+            HOURS, 
+            ALIAS
     };
 
     private InputDefinition() {

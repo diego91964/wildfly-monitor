@@ -7,12 +7,14 @@ package org.rhq.wfly.monitor.extension;
 
 import org.jboss.logging.BasicLogger;
 import org.jboss.logging.Logger;
-import org.jboss.logging.MessageLogger;
+import org.jboss.logging.annotations.MessageLogger;
+
 
 /**
  * Log messages for WildFly cassandra module
  * @author Heiko Braun
  */
+
 @MessageLogger(projectCode = "<<none>>")
 public interface MonitorLogger extends BasicLogger {
     /**

@@ -164,7 +164,7 @@ public class Service implements TopologyChangeListener {
                 attribute = attribute.substring(0, i);
             }
 
-            tasks.add(new Task(host, server, Address.apply(ref.getAddress()), attribute, subref, ref.getInterval()));
+            tasks.add(new Task(host, server, Address.apply(ref.getAddress()), attribute, subref, ref.getInterval() , ref.getAlias()));
         }
         return tasks;
     }

@@ -31,16 +31,30 @@ public class ResourceRef {
     private final String address;
     private final String attribute;
     private final Interval interval;
+    private final String alias;
 
+    public ResourceRef(final String address, final String attribute, final Interval interval, final String alias) {
+        this.address = address;
+        this.attribute = attribute;
+        this.interval = interval;
+        this.alias = alias;
+    }
+    
     public ResourceRef(final String address, final String attribute, final Interval interval) {
         this.address = address;
         this.attribute = attribute;
         this.interval = interval;
+        this.alias = "";
     }
 
-    @Override
+
+	public String getAlias() {
+		return alias;
+	}
+
+	@Override
     public String toString() {
-        return "Task(" + address + ":" + attribute + ", " + interval + ")";
+        return "Task(" + address + ":" + attribute + ", " + interval + ", " + alias + ")";
     }
 
     public String getAddress() {
