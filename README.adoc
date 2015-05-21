@@ -69,27 +69,41 @@ The wildfly-monitor-module.zip server profiles for both standalone and domain mo
 ### Performance Metrics Suggestions ###
 
 *`<data-input name="thread-count" resource="/core-service=platform-mbean/type=threading" attribute="thread-count" minutes="1"/>`
+
 *`<data-input name="loaded-class-count" resource="/core-service=platform-mbean/type=class-loading" attribute="loaded-class-count" minutes="1"/>`
+
 *`<data-input name="non-heap-used" resource="/core-service=platform-mbean/type=memory" attribute="non-heap-memory-usage#used" seconds="20"/>`
+
 *`<data-input name="heap-memory-usage-used" resource="/core-service=platform-mbean/type=memory" attribute="heap-memory-usage#used" seconds="20"/>`
+
 *`<data-input name="object-pending-finalization-count" resource="/core-service=platform-mbean/type=memory" attribute="object-pending-finalization-count" seconds="20"/>`
+
 *`<data-input name="system-load-average" resource="/core-service=platform-mbean/type=operating-system" attribute="system-load-average" seconds="20"/>`
 
 ### Datasource Metrics Suggestions ###
 
 *`<data-input name="ActiveCount" resource="/subsystem=datasources/xa-data-source={XA-NAME}/statistics=pool" attribute="ActiveCount"  seconds="10" alias="ActiveCount"/>`
+
 *`<data-input name="AvailableCount" resource="/subsystem=datasources/xa-data-source={XA-NAME}/statistics=pool" attribute="AvailableCount" minutes="1" alias="AvailableCount" />`
+
 *`<data-input name="CreatedCount" resource="/subsystem=datasources/xa-data-source={XA-NAME}/statistics=pool" attribute="CreatedCount" minutes="1" alias="CreatedCount" />`
+
 *`<data-input name="DestroyedCount" resource="/subsystem=datasources/xa-data-source={XA-NAME}/statistics=pool" attribute="DestroyedCount" minutes="1" alias="DestroyedCount" />`
+
 *`<data-input name="IdleCount" resource="/subsystem=datasources/xa-data-source={XA-NAME}/statistics=pool" attribute="IdleCount"  seconds="10" alias="IdleCount" />`
 
 ### To add metrics with the same name , use the alias attribute"
 
 *`<data-input name="ds-ActiveCount" resource="/subsystem=datasources/data-source={DS-NAME}/statistics=pool" attribute="ActiveCount" seconds="10" alias="ds-ActiveCount"/>`
+
 *`<data-input name="ds-AvailableCount" resource="/subsystem=datasources/data-source={DS-NAME}/statistics=pool" attribute="AvailableCount" minutes="1" alias="ds-AvailableCount"/>`
+
 *`<data-input name="ds-CreatedCount" resource="/subsystem=datasources/data-source={DS-NAME}/statistics=pool" attribute="CreatedCount" minutes="1" alias="ds-CreatedCount"/>`
+
 *`<data-input name="ds-DestroyedCount" resource="/subsystem=datasources/data-source={DS-NAME}/statistics=pool" attribute="DestroyedCount" minutes="1" alias="ds-DestroyedCount"/>`
+
 *`<data-input name="ds-IdleCount" resource="/subsystem=datasources/data-source={DS-NAME}/statistics=pool" attribute="IdleCount"  seconds="10" alias="ds-IdleCount"/>`
+
 
 ## Get In touch
 
