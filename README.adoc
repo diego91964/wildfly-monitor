@@ -5,12 +5,14 @@ measurements from the WildFly model and sends them to a https://github.com/rhq-p
 
 == Prerequisites
 
-=== Wildfly 8.1.0
+=== Wildfly 8.1.0 or 8.2.0
 
-Get and install Wildfly 8.1.0: http://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
+Get and install Wildfly:
 
-It's currently been tested against WF 8.1.0 and the default server configuration (standalone-monitor.xml) is configured for WF 8.
-But apart from that there should be no reason to not use it on WF 9.
+* 8.1.0: http://download.jboss.org/wildfly/8.1.0.Final/wildfly-8.1.0.Final.zip
+* 8.2.0: http://download.jboss.org/wildfly/8.2.0.Final/wildfly-8.2.0.Final.zip
+
+This module have been tested in Wildfly 8.2.0 with InfluxDb.
 
 === RHQ Metrics
 
